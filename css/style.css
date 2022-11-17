@@ -1,0 +1,667 @@
+@import url("reset.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
+
+body{
+	font-family: "Lato";
+	font-weight: 700;
+	background: url("../img/cartoon_red_sunset.jpg") center / cover no-repeat;
+}
+
+.wrapper{
+	position: relative;
+	overflow: hidden;
+	min-height: 100%;
+}
+
+.surface{
+	background: url("../img/surface.png") 0 0 / 100% repeat-x;
+	position: absolute;
+	width: 100%;
+	height: 70px;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+}
+
+.palm-trees__1{
+	background: url("../img/palm-trees.svg") 0 0 / 100% no-repeat;
+	width: 100px;
+	height: 125px;
+	position: absolute;
+	bottom: 69px;
+	right: 0;
+	transform: translate(100%, 0);
+	animation: palm-trees 5s linear infinite;
+	z-index: 1;
+}
+
+.palm-trees__2{
+	background: url("../img/palm-trees.svg") 0 0 / 100% no-repeat;
+	width: 100px;
+	height: 125px;
+	position: absolute;
+	bottom: 69px;
+	right: 0;
+	transform: translate(100%, 0);
+	animation: palm-trees 5s linear infinite 2s;
+	z-index: 1;
+}
+
+.stone-1{
+	background: url("../img/stones/stone-1.svg") 0 0 / 100% no-repeat;
+	width: 75px;
+	height: 25px;
+	position: absolute;
+	bottom: 62px;
+	right: 0;
+	transform: translate(100%, 0);
+	animation: palm-trees 5s linear 4 1s;
+	z-index: 1;
+}
+
+.stone-2{
+	background: url("../img/stones/stone-2.svg") 0 0 / 100% no-repeat;
+	width: 60px;
+	height: 16px;
+	position: absolute;
+	bottom: 68px;
+	right: 0;
+	transform: translate(100%, 0);
+	animation: palm-trees 5s linear 2 2.5s;
+	z-index: 1;
+}
+
+.stone-3{
+	background: url("../img/stones/stone-3.svg") 0 0 / 100% no-repeat;
+	width: 35px;
+	height: 20px;
+	position: absolute;
+	bottom: 68px;
+	right: 0;
+	transform: translate(100%, 0);
+	animation: palm-trees 5s linear 3 3.8s;
+	z-index: 1;
+}
+
+.moon{
+	background: url("../img/moon.svg") no-repeat;
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	width: 65px;
+	height: 65px;
+	animation: moon 30s ease;
+}
+
+@keyframes moon {
+	0%{
+		transform: scale(0.3);
+	}
+	100%{
+		transform: scale(1.2);
+	}
+}
+
+@keyframes palm-trees {
+	100%{
+		transform: translate(-2000px, 0);
+	}
+}
+
+.car{
+	position: absolute;
+	bottom: 80px;
+	left: 60px;
+	animation: car-movement 1s linear infinite;
+	z-index: 2;
+}
+
+.car__body{
+	position: relative;
+	width: 250px;
+	height: 107px;
+}
+
+.car__mainframe{
+	background: url("../img/car/car.svg") 0 0 / 100% no-repeat;
+	position: absolute;
+	width: 250px;
+	height: 107px;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.car__bottom{
+	background: url("../img/car/car-bottom.svg") no-repeat;
+	width: 200px;
+	height: 22px;
+	position: absolute;
+	bottom: 0;
+	left: 24px;
+}
+
+.car__light{
+	background: url("../img/car/car-light.svg") 0 0 / 100% no-repeat;
+	position: absolute;
+	bottom: 17px;
+	right: -128px;
+	width: 130px;
+	height: 32px;
+	transform-origin: left;
+	transform: rotate(27deg);
+}
+
+.car__wheels{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.car__wheel{
+	background: url("../img/car/tyre.svg") 0 0 / 100% no-repeat;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	animation: car-ride 0.5s linear infinite;
+}
+
+.car__wheel:first-child{
+	bottom: -10px;
+	left: 38px;
+}
+
+.car__wheel:last-child{
+	bottom: -10px;
+	right: 41px;
+}
+
+.car__rim{
+	background: url("../img/car/rim.svg") 0 0 / 100% no-repeat;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+}
+
+.car__rim{
+	bottom: 7px;
+	left: 7px;
+}
+
+.plane{
+	background: url("../img/plane.svg") 0 0 / 100% no-repeat;
+	width: 450px;
+	height: 80px;
+	position: absolute;
+	top: 105px;
+	left: 0;
+	transform: translate(-150%, 0);
+	animation: flight-plane 20s linear 3s;
+}
+
+.text span{
+	letter-spacing: 0.5px;
+	color: red;
+	text-shadow: 1px 2px 5px rgba(66, 68, 90, 1);
+	opacity: 0;
+}
+
+.plane__text{
+	font-size: 24px;
+}
+
+.plane__text span:nth-child(1){
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	text-transform: uppercase;
+	animation: text 0.3s ease 10.1s forwards;
+}
+
+.plane__text span:nth-child(2){
+	position: absolute;
+	bottom: 20px;
+	left: 32px;
+	animation: text 0.3s ease 10.2s forwards;
+}
+
+.plane__text span:nth-child(3){
+	position: absolute;
+	bottom: 20px;
+	left: 48px;
+	animation: text 0.3s ease 10.3s forwards;
+}
+
+.plane__text span:nth-child(4){
+	position: absolute;
+	bottom: 20px;
+	left: 60px;
+	animation: text 0.3s ease 10.4s forwards;
+}
+
+.plane__text span:nth-child(5){
+	position: absolute;
+	bottom: 20px;
+	left: 77px;
+	text-transform: uppercase;
+	animation: text 0.3s ease 10.5s forwards;
+}
+
+.plane__text span:nth-child(6){
+	position: absolute;
+	bottom: 20px;
+	left: 96px;
+	animation: text 0.3s ease 10.6s forwards;
+}
+
+.plane__text span:nth-child(7){
+	position: absolute;
+	bottom: 20px;
+	left: 116px;
+	text-transform: uppercase;
+	animation: text 0.3s ease 10.7s forwards;
+}
+
+.plane__text span:nth-child(8){
+	position: absolute;
+	bottom: 20px;
+	left: 125px;
+	animation: text 0.3s ease 10.8s forwards;
+}
+
+.plane__text span:nth-child(9){
+	background: url("../img/muscles.gif") 0 0 / 100% no-repeat;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	bottom: 20px;
+	right: 265px;
+	opacity: 0;
+	animation: text 0.3s ease 10.9s forwards;
+}
+
+.airship{
+	background: url("../img/airship.svg") 0 0 / 100% no-repeat;
+	width: 400px;
+	height: 80px;
+	position: absolute;
+	top: 15px;
+	right: 0;
+	transform: translate(150%, 0);
+	animation: flight-airship 28s linear;
+}
+
+.airship__text span{
+	font-size: 20px;
+}
+
+.airship__text span:nth-child(1){
+	position: absolute;
+	top: 10px;
+	right: 173px;
+	transform: rotate(-20deg);
+	animation: text 0.3s ease 11.1s forwards;
+}
+
+.airship__text span:nth-child(2){
+	position: absolute;
+	top: 6px;
+	right: 163px;
+	transform: rotate(-16deg);
+	animation: text 0.3s ease 11.2s forwards;
+}
+
+.airship__text span:nth-child(3){
+	position: absolute;
+	top: 3px;
+	right: 150px;
+	transform: rotate(-12deg);
+	animation: text 0.3s ease 11.3s forwards;
+}
+
+.airship__text span:nth-child(4){
+	position: absolute;
+	top: 20px;
+	right: 141px;
+	transform: rotate(-9deg);
+	animation: text 0.3s ease 11.4s forwards;
+}
+
+.airship__text span:nth-child(5){
+	position: absolute;
+	top: 19px;
+	right: 134px;
+	transform: rotate(-7deg);
+	animation: text 0.3s ease 11.5s forwards;
+}
+
+.airship__text span:nth-child(6){
+	position: absolute;
+	top: 18px;
+	right: 127px;
+	transform: rotate(-8deg);
+	animation: text 0.3s ease 11.6s forwards;
+}
+
+.airship__text span:nth-child(7){
+	position: absolute;
+	top: 17px;
+	right: 120px;
+	transform: rotate(-8deg);
+	animation: text 0.3s ease 11.7s forwards;
+}
+
+.airship__text span:nth-child(8){
+	position: absolute;
+	top: 32px;
+	right: 115px;
+	transform: rotate(-5deg);
+	animation: text 0.3s ease 11.8s forwards;
+}
+
+.airship__text span:nth-child(9){
+	position: absolute;
+	top: 32px;
+	right: 101px;
+	transform: rotate(-3deg);
+	animation: text 0.3s ease 11.9s forwards;
+}
+
+.airship__text span:nth-child(10){
+	position: absolute;
+	top: 32px;
+	right: 88px;
+	transform: rotate(-3deg);
+	animation: text 0.3s ease 12s forwards;
+}
+
+.airship__text span:nth-child(11){
+	position: absolute;
+	top: 32px;
+	right: 77px;
+	transform: rotate(-3deg);
+	animation: text 0.3s ease 12.1s forwards;
+}
+
+.airship__text span:nth-child(12){
+	position: absolute;
+	top: 32px;
+	right: 65px;
+	transform: rotate(-3deg);
+	animation: text 0.3s ease 12.2s forwards;
+}
+
+.airship__text span:nth-child(13){
+	position: absolute;
+	top: 32px;
+	right: 52px;
+	transform: rotate(-3deg);
+	animation: text 0.3s ease 12.3s forwards;
+}
+
+.airship__text span:nth-child(14){
+	position: absolute;
+	top: 32px;
+	right: 37px;
+	transform: rotate(-3deg);
+	animation: text 0.3s ease 12.4s forwards;
+}
+
+.airship__text span:nth-child(15){
+	background: url("../img/100.gif") 0 0 / 100% no-repeat;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 55px;
+	right: 24px;
+	opacity: 0;
+	transform: rotate(-3deg);
+	animation: text 0.3s ease 12.5s forwards;
+}
+
+.hot-air-baloon{
+	background: url("../img/hot-air-baloon.svg") 0 0 / 100% no-repeat;
+	width: 100px;
+	height: 300px;
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	transform: scale(0.6) translate(-50%, 340%) ; 
+	animation: flight-hot-air-baloon 35s linear 8s;
+}
+
+.hot-air-baloon span{
+	font-size: 14px;
+}
+
+.hot-air-baloon span:nth-child(1){
+	position: absolute;
+	bottom: 116px;
+	left: 29px;
+	animation: text 0.3s ease 13s forwards;
+}
+
+.hot-air-baloon span:nth-child(2){
+	position: absolute;
+	bottom: 116px;
+	left: 38px;
+	animation: text 0.3s ease 13.1s forwards;
+}
+
+.hot-air-baloon span:nth-child(3){
+	position: absolute;
+	bottom: 116px;
+	left: 49px;
+	animation: text 0.3s ease 13.2s forwards;
+}
+
+.hot-air-baloon span:nth-child(4){
+	position: absolute;
+	bottom: 116px;
+	left: 58px;
+	animation: text 0.3s ease 13.3s forwards;
+}
+
+.hot-air-baloon span:nth-child(5){
+	position: absolute;
+	bottom: 93px;
+	left: 20px;
+	animation: text 0.3s ease 13.4s forwards;
+}
+
+.hot-air-baloon span:nth-child(6){
+	position: absolute;
+	bottom: 93px;
+	left: 29px;
+	animation: text 0.3s ease 13.5s forwards;
+}
+
+.hot-air-baloon span:nth-child(7){
+	position: absolute;
+	bottom: 93px;
+	left: 37px;
+	animation: text 0.3s ease 13.6s forwards;
+}
+
+.hot-air-baloon span:nth-child(8){
+	position: absolute;
+	bottom: 93px;
+	left: 43px;
+	animation: text 0.3s ease 13.7s forwards;
+}
+
+.hot-air-baloon span:nth-child(9){
+	position: absolute;
+	bottom: 93px;
+	left: 49px;
+	animation: text 0.3s ease 13.8s forwards;
+}
+
+.hot-air-baloon span:nth-child(10){
+	position: absolute;
+	bottom: 93px;
+	left: 59px;
+	animation: text 0.3s ease 13.9s forwards;
+}
+
+.hot-air-baloon span:nth-child(11){
+	position: absolute;
+	bottom: 93px;
+	left: 68px;
+	animation: text 0.3s ease 14s forwards;
+}
+
+.hot-air-baloon span:nth-child(12){
+	position: absolute;
+	bottom: 73px;
+	left: 40px;
+	animation: text 0.3s ease 14.1s forwards;
+}
+
+.hot-air-baloon span:nth-child(13){
+	position: absolute;
+	bottom: 73px;
+	left: 45px;
+	animation: text 0.3s ease 14.2s forwards;
+}
+
+.hot-air-baloon span:nth-child(14){
+	position: absolute;
+	bottom: 54px;
+	left: 30px;
+	animation: text 0.3s ease 14.3s forwards;
+}
+
+.hot-air-baloon span:nth-child(15){
+	position: absolute;
+	bottom: 54px;
+	left: 43px;
+	animation: text 0.3s ease 14.4s forwards;
+}
+
+.hot-air-baloon span:nth-child(16){
+	position: absolute;
+	bottom: 54px;
+	left: 50px;
+	animation: text 0.3s ease 14.5s forwards;
+}
+
+.hot-air-baloon span:nth-child(17){
+	position: absolute;
+	bottom: 54px;
+	left: 56px;
+	animation: text 0.3s ease 14.6s forwards;
+}
+
+.hot-air-baloon span:nth-child(18){
+	position: absolute;
+	bottom: 34px;
+	left: 20px;
+	animation: text 0.3s ease 14.7s forwards;
+}
+
+.hot-air-baloon span:nth-child(19){
+	position: absolute;
+	bottom: 34px;
+	left: 28px;
+	animation: text 0.3s ease 14.8s forwards;
+}
+
+.hot-air-baloon span:nth-child(20){
+	position: absolute;
+	bottom: 34px;
+	left: 37px;
+	animation: text 0.3s ease 14.9s forwards;
+}
+
+.hot-air-baloon span:nth-child(21){
+	position: absolute;
+	bottom: 34px;
+	left: 47px;
+	animation: text 0.3s ease 15s forwards;
+}
+
+.hot-air-baloon span:nth-child(22){
+	position: absolute;
+	bottom: 34px;
+	left: 57px;
+	animation: text 0.3s ease 15.1s forwards;
+}
+
+.hot-air-baloon span:nth-child(23){
+	position: absolute;
+	bottom: 34px;
+	left: 67px;
+	animation: text 0.3s ease 15.2s forwards;
+}
+
+.hot-air-baloon span:nth-child(24){
+	background: url("../img/fire.gif") 0 0 / 100% no-repeat;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	bottom: 15px;
+	left: 20px;
+	animation: text 0.3s ease 15.3s forwards;
+	opacity: 0;
+}
+
+.hot-air-baloon span:nth-child(25){
+	background: url("../img/fire.gif") 0 0 / 100% no-repeat;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	bottom: 15px;
+	right: 27px;
+	animation: text 0.3s ease 15.3s forwards;
+	opacity: 0;
+}
+
+
+@keyframes car-movement {
+	0%{
+		transform: translateY(-1px);
+	}
+	50%{
+		transform: translateY(1px);
+	}
+	100%{
+		transform: translateY(-1px);
+	}
+}
+
+@keyframes car-ride {
+	0%{
+
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes flight-plane {
+	100%{
+		transform: translate(2000px);
+	}
+}
+
+@keyframes flight-airship {
+	100%{
+		transform: translate(-2000px);
+	}
+}
+
+@keyframes flight-hot-air-baloon {
+	100%{
+		transform: translate(-50%, -2000px);
+	}
+}
+
+@keyframes text {
+	100%{
+		opacity: 1;
+	}
+}
+
+
